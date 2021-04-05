@@ -2,11 +2,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
                 sh '''
 					#!/bin/bash
 					echo "check 1"
+					git clone https://github.com/byashaswini10/c_repo.git
+					make
 					'''
             }
         }
