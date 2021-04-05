@@ -7,7 +7,7 @@ pipeline {
                 sh '''
 					#!/bin/bash
 					echo "check 1"
-					git checkout c_repo
+					cd /var/lib/jenkins/workspace/C_PIPE1/c_repo
 					make
 					'''
             }
