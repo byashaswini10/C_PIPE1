@@ -1,11 +1,15 @@
-pipeline { 
-agent any 
-    stages { 
-        stage ('Build') { 
-		echo "build phase"
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                sh '''
+					#!/bin/bash
+					echo "check 1"
+					'''
+            }
         }
-		stage ('Deploy') { 
-		echo "deploy phase"    
     }
-    }           
- }
+}
+
