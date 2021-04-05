@@ -1,0 +1,12 @@
+pipeline { 
+agent any 
+    stages { 
+        stage ('Build') { 
+			cd /var/lib/jenikins/workspace/C_PIPE1
+			make
+        }
+		stage ('Deploy') { 
+			cp ABC.exe /home/ec2-user/git_practice/c_bilds
+        }
+    }           
+ }
